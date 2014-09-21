@@ -7,6 +7,8 @@ import java.util.Random;
 
 
 public class WinCanvas extends Canvas implements Runnable{
+
+	private static final long serialVersionUID = 1L;
 	public static final int WIDTH = 320;
 	public static final int HEIGHT = 240;
 	public static final int SCALE = 2;
@@ -93,7 +95,7 @@ public class WinCanvas extends Canvas implements Runnable{
 		}
 		Graphics2D g = (Graphics2D)bs.getDrawGraphics();
 		//
-		g.setColor(Color.black);
+		g.setColor(Color.yellow);
 		g.fillRect(0, 0, dim.width, dim.height);
 		hnd.draw(g);
 		//

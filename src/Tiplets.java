@@ -18,19 +18,21 @@ public class Tiplets extends WinObject{
 	public void draw(Graphics2D g){
 		switch(size){
 		case 0:
-			g.setColor(Color.blue);
+			g.setColor(new Color(0xFF4545));
 			break;
 		case 1:
-			g.setColor(new Color(0x5555aa));
+			g.setColor(new Color(0xaa5555));
 			break;
 		case 2:
-			g.setColor(Color.cyan);
+			g.setColor(Color.red);
 			break;
 		default: 
 			g.setColor(Color.yellow);
 			break;
 		}
-		g.fillArc(x, y, width, height,50,360);
+		int[] px = {x , x  + width, x + width };
+		int[] py = {y   , y - height / 2, y + height / 2 };
+		g.fillPolygon(px,py,3);
 		g.setColor(Color.black);
 	}
 	

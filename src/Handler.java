@@ -35,14 +35,14 @@ public class Handler {
 		for(int i = 0 ; i < tmp_objects.size() ; i++){
 			WinObject min = tmp_objects.get(i);
 			for(int j = i; j < tmp_objects.size(); j++)
-				if(min.size < tmp_objects.get(j).size){
+				if(min.size > tmp_objects.get(j).size){
 					min = tmp_objects.get(j);	
 					tmp_objects.set(j, tmp_objects.get(i)) ;
 					tmp_objects.set(i, min);
 					
 				}
 		}
-		objects = tmp_objects;
+		objects.addAll(tmp_objects);
 		tmp_objects.remove();
 	}
 }
